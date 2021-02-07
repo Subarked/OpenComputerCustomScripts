@@ -241,5 +241,31 @@ for i = 1,3 do
 	robot.forward()
 	robot.turnLeft()
 end
+for i = 1,3 do
+	robot.turnRight()
+	robot.back()
+	robot.turnRight()
+	for v = 1,5 do
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+		robot.back()
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+	end
+	robot.turnLeft()
+	robot.back()
+	robot.turnLeft()
+	for v = 1,5 do
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+		robot.back()
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+	end
+end
 
 
