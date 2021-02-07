@@ -1,3 +1,5 @@
+--run this to downlad the script to the tmp  folder
+--wget -f https://github.com/Subarked/OpenComputerCustomScripts/raw/main/building.lua /tmp/building.lua
 local robot = require("robot")
 
 --break old floor
@@ -108,6 +110,7 @@ for i = 1,3 do
 		end
 	end
 end
+--First 2 layers of wall
 for i = 1,2 do
 	robot.up()
 	robot.select(2)
@@ -164,6 +167,7 @@ for i = 1,2 do
 	end
 	robot.turnRight()
 end
+--Third floor of walls
 for i = 1,1 do
 	robot.up()
 	robot.select(2)
@@ -208,6 +212,7 @@ for i = 1,1 do
 	end
 	robot.turnRight()
 end
+--roof
 robot.up()
 robot.select(3)
 for i = 1,3 do
