@@ -3,6 +3,9 @@
 local robot = require("robot")
 local sign = require("sign")
 
+signTextOne = "Subarked's Pizzeria and Orhanage"
+signTextTwo = "Your loss is our sauce!"
+
 --break old floor
 robot.select(1)
 for i = 1,3 do
