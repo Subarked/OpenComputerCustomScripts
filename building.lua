@@ -1,7 +1,9 @@
 --run this to downlad the script to the tmp  folder
 --wget -f https://github.com/Subarked/OpenComputerCustomScripts/raw/main/building.lua /tmp/building.lua
 local robot = require("robot")
-local sign = require("sign")
+local component = require("component")
+local robot_component_api = component.sign -- if using openos, else component.proxy(component.list("robot")())
+robot_component_api.move(sides.front)
 
 signTextOne = "Subarked's Pizzeria and Orhanage"
 signTextTwo = "Your loss is our sauce!"
