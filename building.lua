@@ -1,6 +1,7 @@
 local robot = require("robot")
 
 --break old floor
+robot.select(1)
 for i = 1,3 do
 	for v = 1,5 do
 		if robot.detectDown()  then
@@ -107,59 +108,61 @@ for i = 1,3 do
 		end
 	end
 end
-robot.up()
-robot.select(2)
-for v = 1,5 do
+for i = 1,2 do
+	robot.up()
+	robot.select(2)
+	for v = 1,5 do
 		if robot.detectDown() == false  then
-			robot.placeDown()
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
 		end
-		robot.back()
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
+	robot.turnRight()
+	for v = 1,1 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
 	end
-robot.turnRight()
-for v = 1,1 do
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-		robot.back()
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-end
-robot.forward()
-robot.forward()
-for v = 1,2 do
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-		robot.back()
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-end
-robot.turnRight()
-for v = 1,5 do
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-		robot.back()
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-end
-robot.turnRight()
-for v = 1,5 do
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-		robot.back()
-		if robot.detectDown() == false  then
-			robot.placeDown()
-		end
-end
-robot.turnRight()	
+	robot.forward()
+	robot.forward()
+	for v = 1,2 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+	end
+	robot.turnRight()
+	for v = 1,5 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+	end
+	robot.turnRight()
+	for v = 1,5 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+	end
+	robot.turnRight()
+	end
 
 
 
