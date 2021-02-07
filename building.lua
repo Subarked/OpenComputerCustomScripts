@@ -58,11 +58,11 @@ end
 for i = 1,3 do
 	for v = 1,5 do
 		if robot.detectDown() == false then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 		robot.forward()
 		if robot.detectDown() == false then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 	end
 	robot.turnRight()
@@ -70,11 +70,11 @@ for i = 1,3 do
 	robot.turnRight()
 	for v = 1,5 do
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 		robot.forward()
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 	end
 	robot.turnLeft()
@@ -87,11 +87,11 @@ for i = 1,3 do
 	robot.turnRight()
 	for v = 1,5 do
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 		robot.back()
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 	end
 	robot.turnLeft()
@@ -99,11 +99,11 @@ for i = 1,3 do
 	robot.turnLeft()
 	for v = 1,5 do
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 		robot.back()
 		if robot.detectDown() == false  then
-			robot.swingDown(4,false)
+			robot.placeDown()
 		end
 	end
 end
