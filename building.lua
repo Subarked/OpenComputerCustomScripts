@@ -2,7 +2,7 @@
 --wget -f https://github.com/Subarked/OpenComputerCustomScripts/raw/main/building.lua /tmp/building.lua
 local robot = require("robot")
 local component = require("component")
-local robot_component_api = component.sign -- if using openos, else component.proxy(component.list("robot")())
+local sign = component.sign 
 
 signTextOne = "Subarked's Pizzeria and Orhanage"
 signTextTwo = "Your loss is our sauce!"
