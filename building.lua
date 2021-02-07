@@ -1,6 +1,7 @@
 --run this to downlad the script to the tmp  folder
 --wget -f https://github.com/Subarked/OpenComputerCustomScripts/raw/main/building.lua /tmp/building.lua
 local robot = require("robot")
+local sign = require("sign")
 
 --break old floor
 robot.select(1)
@@ -267,5 +268,35 @@ for i = 1,3 do
 		end
 	end
 end
-
-
+for v = 1,5 do
+		robot.forward()
+end
+robot.turnRight()
+robot.forward()
+robot.forward()
+robot.turnLeft()
+robot.forward()
+robot.forward()
+robot.turnAround()
+robot.down()
+robot.select(4)
+robot.place()
+sign.setValue(signTextTwo)
+robot.turnLeft()
+robot.forward()
+robot.turnRight()
+sign.setValue(signTextOne)
+robot.turnLeft()
+robot.back()
+robot.turnRight()
+robot.up()
+robot.turnAround()
+robot.back()
+robot.back()
+robot.turnRight()
+robot.back()
+robot.back()
+robot.turnLeft()
+for v = 1,5 do
+		robot.back()
+end
