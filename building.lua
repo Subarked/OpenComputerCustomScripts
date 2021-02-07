@@ -132,6 +132,7 @@ for i = 1,2 do
 	end
 	robot.forward()
 	robot.forward()
+	robot.forward()
 	for v = 1,2 do
 			if robot.detectDown() == false  then
 				robot.placeDown()
