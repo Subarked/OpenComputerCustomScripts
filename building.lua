@@ -162,7 +162,78 @@ for i = 1,2 do
 			end
 	end
 	robot.turnRight()
+end
+for i = 1,1 do
+	robot.up()
+	robot.select(2)
+	for v = 1,5 do
+		if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+		end
+	robot.turnRight()
+	for v = 1,5 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
 	end
-
+	robot.turnRight()
+	for v = 1,5 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+	end
+	robot.turnRight()
+	for v = 1,5 do
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+			robot.forward()
+			if robot.detectDown() == false  then
+				robot.placeDown()
+			end
+	end
+	robot.turnRight()
+end
+robot.up()
+robot.select(3)
+for i = 1,3 do
+	for v = 1,5 do
+		if robot.detectDown() == false then
+			robot.placeDown()
+		end
+		robot.forward()
+		if robot.detectDown() == false then
+			robot.placeDown()
+		end
+	end
+	robot.turnRight()
+	robot.forward()
+	robot.turnRight()
+	for v = 1,5 do
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+		robot.forward()
+		if robot.detectDown() == false  then
+			robot.placeDown()
+		end
+	end
+	robot.turnLeft()
+	robot.forward()
+	robot.turnLeft()
+end
 
 
