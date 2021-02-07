@@ -4,8 +4,10 @@ local robot = require("robot")
 local component = require("component")
 local sign = component.sign 
 
-signTextOne = "Subarked's Pizzeria and Orhanage"
-signTextTwo = "Your loss is our sauce!"
+signTextOne = "Subarked's Pizzeria"
+signTextTwo = "and Orhanage!"
+signTextThree = "Your loss is"
+signTextFour = "our sauce!"
 
 --break old floor
 robot.select(1)
@@ -283,15 +285,30 @@ robot.forward()
 robot.forward()
 robot.turnAround()
 robot.down()
-robot.select(4)
-robot.place()
-sign.setValue(signTextTwo)
 robot.turnLeft()
 robot.forward()
+robot.forward()
 robot.turnRight()
+robot.select(4)
+robot.place()
 sign.setValue(signTextOne)
 robot.turnLeft()
 robot.back()
+robot.turnRight()
+robot.place()
+sign.setValue(signTextTwo)
+robot.turnRight()
+robot.forward()
+robot.turnLeft()
+robot.place()
+sign.setValue(signTextThree)
+robot.turnRight()
+robot.forward()
+robot.turnLeft()
+robot.place()
+sign.setValue(signTextFour)
+robot.turnLeft()
+robot.forward()
 robot.turnRight()
 robot.up()
 robot.turnAround()
@@ -300,7 +317,6 @@ robot.back()
 robot.turnRight()
 robot.back()
 robot.back()
-robot.turnLeft()
-for v = 1,5 do
+robot.turnLeft()for v = 1,5 do
 		robot.back()
 end
